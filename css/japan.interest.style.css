@@ -1,0 +1,70 @@
+/* Global */
+body {
+    font-family: 'Fredericka the Great', cursive;
+    margin: 0;
+    padding: 0;
+    color:#f4f4f4;
+}
+/* gallery section */
+.container {
+    height: 100vh;
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 0.6rem;
+    grid-template-areas: 
+    "long long long long"
+    "long long long long"
+    "temple sushi modern culture";
+}
+.photo {
+    padding: 0;
+    background-color: antiquewhite;
+    /* below is the key to have the pics scaled to the size! */
+    background-size: cover; 
+    transition: all 0.1s ease-in;
+}
+.long {
+    grid-area: long;
+    background-image: url(https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+.temple {
+    grid-area: temple;
+    background-image: url(https://images.pexels.com/photos/1310788/pexels-photo-1310788.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+
+}
+.sushi {
+    grid-area: sushi;
+    background-image: url(https://images.pexels.com/photos/271715/pexels-photo-271715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+.modern {
+    grid-area: modern;
+    background-image: url(https://images.pexels.com/photos/417350/pexels-photo-417350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+.culture {
+    grid-area: culture;
+    background-image: url(https://images.pexels.com/photos/1325837/pexels-photo-1325837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350);
+}
+.container .big-content h1 {
+    font-size: 4rem;
+    margin: 1rem;
+}
+.container .content {
+    font-size: 1rem;
+    text-align: end;
+    padding: 1rem;
+
+}
+.container a{
+    margin:1rem;
+    color: #f4f4f4;    
+}
+.container a:hover{
+    color:navy;
+}
+/* scale the photo to 1.2 size when hover on the photo */
+.photo:hover{
+    transform: scale(1.05);
+}
+
