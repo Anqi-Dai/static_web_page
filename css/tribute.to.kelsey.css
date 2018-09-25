@@ -3,11 +3,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Bellefair', serif;
     font-family: 'Libre Baskerville', serif;
     /* font-size: 1.2rem; */
     /* max-width: 800px; */
-    background-color: bisque;
+    background-color:#f4f4f4;
 }
 /* the showcase */
 #image {
@@ -58,4 +57,128 @@ body {
 #img-caption {
     display: none;
 }
+
 /* the timeline part */
+#tribute-info .header h1 {
+    width: inherit;
+    height: auto;
+    text-align: center;
+    color: #f4f4f4;
+    background: rgba(143, 108, 124, 0.9);
+    margin: 0;
+    padding: 1rem;
+}
+#tribute-info .timeline{
+    position: relative;   
+    /* The above line is crucial for the timeline to show, you have to have the container position relative to have a timeline with position absolute */
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+#tribute-info .timeline ul {
+  
+    width: 40%;
+    height: auto;
+    list-style-type: none;
+}
+#tribute-info ul li {
+    color: #f4f4f4;
+    background-color: #8F6C7C;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin: 10%;
+    line-height: 1.5rem;
+    position: relative;
+}
+#tribute-info .timeline::after{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: rgb(100, 100, 100);
+    position: absolute;
+    left: 50%;
+    /* It's important to have the above line, to put it in the middle! */
+    top: 0;
+    bottom: 0;
+}
+#tribute-info ul li:nth-child(even){
+    /* the even child will locate at the right of the timeline */
+    position: relative;
+    left: 115%;
+    width: auto;
+    clear: both;
+    text-align: center;
+}
+#tribute-info ul li:nth-child(odd){
+    left: 20%;
+    position: relative;
+    clear: both;
+    width: auto;
+    text-align: center;
+}
+/* Add the circle */
+#tribute-info ul li:nth-child(odd)::before{
+    content: '';
+    position: absolute;
+    background: #8F6C7C;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px #8F6C7C;
+    right: -47px;
+    z-index: 1;
+}
+#tribute-info ul li:nth-child(even)::before{
+    content: '';
+    position: absolute;
+    background: #8F6C7C;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px #8F6C7C;
+    left: -48px;
+    z-index: 1;
+}
+.time {
+    margin: 0;
+    padding: 0px 20px;
+    background: #8F6C7C;
+    color:#f4f4f4;
+    border-radius: 20px;
+    /* font-family: 'Bellefair', serif; */
+    font-style: italic;
+    font-size: 1.5rem;
+}
+#tribute-info .timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 0;
+    right: -155px;
+}
+#tribute-info .timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 0;
+    left:-155px; 
+}
+.link {
+    width:inherit;
+    height: auto;
+    background: rgb(143, 108, 124, 0.7);
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+    color: #f4f4f4;
+}
+footer {
+    width: inherit;
+    height: auto;
+    background-color:#323232;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0;
+    font-family: 'Bellefair', serif;
+    color: #f4f4f4;
+    font-size: large;
+}
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
