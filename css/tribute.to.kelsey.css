@@ -9,24 +9,53 @@ body {
     /* max-width: 800px; */
     background-color: bisque;
 }
-/* the showcase  */
-.showcase > #img-div > #image {
+/* the showcase */
+#image {
     height: 100vh;
     width: 100%; 
     position: relative;
     object-fit: cover;
     display: block;
-    
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    transition: all 500ms;
 }
-.showcase > .content {
+#image:hover{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    /* transition: all 500ms; */
+}
+#image:hover + .text {
+    /* My gosh I have to put this way since the structure restriction set by FCC! */
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+.showcase  .text {
     position: absolute;
-    top: 50%;
-    width: 80%;
+    top: 40%;
     text-align: center;
     color: #f4f4f4;
     z-index: 1;
 }
 #title {
     font-size: 4rem;
-    width: 100%;
+    width: 75%;
+    border-top: 4px solid #f4f4f4;
+    border-bottom: 4px solid #f4f4f4;
+    margin: auto;
 }
+.showcase  .text  p {
+    line-height:2rem;
+    width: 50%;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: right;
+    padding-top: 5%;
+    padding-left: 20%;
+    font-style: italic;
+}
+#img-caption {
+    display: none;
+}
+/* the timeline part */
