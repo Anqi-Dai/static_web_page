@@ -1,0 +1,57 @@
+body{
+    background: #455E13;
+    color:#19313B;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 670px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5rem;
+}
+.header{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#title{
+    color:#E6F2CC;
+    padding-bottom: 10px;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #E6F2CC;
+    max-width: 90%;
+}
+h1{
+    margin-bottom: 0;
+}
+
+#description{
+    color: #E6F2CC;
+    padding: 5px 5px 5px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    max-width: 70%;
+    text-align: center;
+}
+.wrapper{
+    border: 0px solid #19313B;
+    box-shadow: 0 0 20px 0;
+    padding: 2rem;
+    background:#E6F2CC;
+}
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+}
+.wrapper form .info p input{
+   width: 100%;
+}
+.wrapper form .info p{
+     border: 2px solid #19313B;
+     margin: 0;
+     padding: 10px 0;
+}
+
+
