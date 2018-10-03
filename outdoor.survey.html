@@ -11,10 +11,10 @@
     <div class="container">
         <div >
             <!-- If you put the header class in the upper div, you will only be able to style the container, so you have to put the header  class inside the h1 and p separately to style them individually and simoutanously. -->
-            <h1 id="title" class="header">
+            <h1 id="title" class="center">
                     Survey for the Portland trip
             </h1>
-            <p id="description" class="header">
+            <p id="description" class="center">
                     Let us know what you think about the recent Portland, ME trip!
             </p>
         </div>
@@ -37,7 +37,7 @@
                             <label id="number-label">Age</label>
                             <input type="number" min="5" max="100" placeholder="Enter your age">
                         </p>
-                        <p>
+                        <p class="full">
                             Which option best describes your current role?
                         </p>
                         <select name="job" id="job">
@@ -51,32 +51,31 @@
             <hr>
             <!-- general rating  -->
             <div class="radio general">
-                <p>On a scale of 1 to 5, how much are you satisfied with the trip?</p>
-                <p>1 being least satisfied, 5 being the most.</p>
-                <input type="radio" name="general" value="1">1<br>
-                <input type="radio" name="general" value="2">2<br>
-                <input type="radio" name="general" value="3" >3<br>
-                <input type="radio" name="general" value="4">4<br>
-                <input type="radio" name="general" value="5">5<br>
+                <p>On a scale of 1 to 5, how much are you satisfied with the trip? <br>(1 being least satisfied, 5 being the most.)</p>
+                <input type="radio" name="general" value="1">1
+                <input type="radio" name="general" value="2">2
+                <input type="radio" name="general" value="3" >3
+                <input type="radio" name="general" value="4">4
+                <input type="radio" name="general" value="5">5
             </div>
             <!-- tour guide rating -->
             <div class="radio guide">
                 <p>On a scale of 1 to 5, how much are you satisfied with the tour guide service?</p>
-                <input type="radio" name="general" value="1">1<br>
-                <input type="radio" name="general" value="2">2<br>
-                <input type="radio" name="general" value="3">3<br>
-                <input type="radio" name="general" value="4">4<br>
-                <input type="radio" name="general" value="5">5<br>
+                <input type="radio" name="general" value="1">1
+                <input type="radio" name="general" value="2">2
+                <input type="radio" name="general" value="3">3
+                <input type="radio" name="general" value="4">4
+                <input type="radio" name="general" value="5">5
             </div>
-                <!-- accomodation rating -->
-                <div class="radio accomodation">
-                        <p>On a scale of 1 to 5, how much are you satisfied with the accomodation?</p>
-                        <input type="radio" name="general" value="1">1<br>
-                        <input type="radio" name="general" value="2">2<br>
-                        <input type="radio" name="general" value="3" >3<br>
-                        <input type="radio" name="general" value="4">4<br>
-                        <input type="radio" name="general" value="5">5<br>
-                   </div>
+                <!-- accommodation rating -->
+                <div class="radio accommodation">
+                    <p>On a scale of 1 to 5, how much are you satisfied with the accommodation?</p>
+                    <input type="radio" name="general" value="1">1
+                    <input type="radio" name="general" value="2">2
+                    <input type="radio" name="general" value="3" >3
+                    <input type="radio" name="general" value="4">4
+                    <input type="radio" name="general" value="5">5
+                </div>
                 <!-- favorite places checkboxes -->
                 <div class="check">
                     <p>Please select your favorite place(s) to visit in Portland</p>
@@ -91,7 +90,7 @@
                     <p>Any comments or suggestions for us?</p>
                     <textarea name="comments" rows="5"></textarea>
                 </div>
-                <button id="submit">Submit</button>
+                <button id="submit" class="center">Submit</button>
             </form>
         </div>
     </div>
