@@ -21,32 +21,32 @@
         <div class="wrapper">
             <form id="survey-form">
                 <div class="info">
-                        <p>
-                            <label id="name-label">Name</label>
-                            <input type="text" placeholder="Enter your name">
-                        </p>
-                        <p>
-                            <label id="email-label">Email</label>
-                            <input type="email" placeholder="Enter your email">
-                        </p>
-                        <p>
-                            <label id="phone-label">Phone Number</label>
-                            <input type="text" placeholder="Enter your phone number">
-                        </p>
-                        <p>
-                            <label id="number-label">Age</label>
-                            <input type="number" min="5" max="100" placeholder="Enter your age">
-                        </p>
-                        <p class="full">
-                            Which option best describes your current role?
-                        </p>
-                        <select name="job" id="job">
-                                <option value="student">Student</option>
-                                <option value="full-time-job">Full time job</option>
-                                <option value="full-time-learner">Full time learner</option>
-                                <option value="prefer-not-say">Prefer not to say</option>
-                                <option value="other">Other</option>
-                        </select>
+                    <p>
+                        <label id="name-label">Name</label>
+                        <input id="name" type="text" placeholder="Enter your name" required>
+                    </p>
+                    <p>
+                        <label id="email-label">Email</label>
+                        <input id='email' type="email" placeholder="Enter your email" required>
+                    </p>
+                    <p>
+                        <label id="phone-label">Phone Number</label>
+                        <input type="text" placeholder="Enter your phone number">
+                    </p>
+                    <p>
+                        <label id="number-label">Age</label>
+                        <input id="number" type="number" min="5" max="100" placeholder="Enter your age">
+                    </p>
+                    <p class="full">
+                        Which option best describes your current role?
+                    </p>
+                    <select name="job" id="dropdown">
+                            <option value="student">Student</option>
+                            <option value="full-time-job">Full time job</option>
+                            <option value="full-time-learner">Full time learner</option>
+                            <option value="prefer-not-say">Prefer not to say</option>
+                            <option value="other">Other</option>
+                    </select>
             </div>
             <hr>
             <!-- general rating  -->
@@ -67,30 +67,31 @@
                 <input type="radio" name="general" value="4">4
                 <input type="radio" name="general" value="5">5
             </div>
-                <!-- accommodation rating -->
-                <div class="radio accommodation">
-                    <p>On a scale of 1 to 5, how much are you satisfied with the accommodation?</p>
-                    <input type="radio" name="general" value="1">1
-                    <input type="radio" name="general" value="2">2
-                    <input type="radio" name="general" value="3" >3
-                    <input type="radio" name="general" value="4">4
-                    <input type="radio" name="general" value="5">5
-                </div>
-                <!-- favorite places checkboxes -->
-                <div class="check">
-                    <p>Please select your favorite place(s) to visit in Portland</p>
-                    <input type="checkbox" name="place">Portland Observatory<br>
-                    <input type="checkbox" name="place">Portland Head Lighthouse<br>
-                    <input type="checkbox" name="place">Old Port<br>
-                    <input type="checkbox" name="place">East/West Promenade<br>
-                    <input type="checkbox" name="place">Peaks Island<br>
-                    <input type="checkbox" name="place">Fort Williams Park<br>
-                </div>
-                <div class="comments">
-                    <p>Any comments or suggestions for us?</p>
-                    <textarea name="comments" rows="5"></textarea>
-                </div>
-                <button id="submit" class="center">Submit</button>
+            <!-- accommodation rating -->
+            <div class="radio accommodation">
+                <p>On a scale of 1 to 5, how much are you satisfied with the accommodation?</p>
+                <input type="radio" name="general" value="1">1
+                <input type="radio" name="general" value="2">2
+                <input type="radio" name="general" value="3" >3
+                <input type="radio" name="general" value="4">4
+                <input type="radio" name="general" value="5">5
+            </div>
+            <!-- favorite places checkboxes -->
+            <div class="check">
+                <p>Please select your favorite place(s) to visit in Portland</p>
+                <input type="checkbox" name="place" value="observatory">Portland Observatory<br>
+                <input type="checkbox" name="place" value="lighthourse">Portland Head Lighthouse<br>
+                <input type="checkbox" name="place" value="port">Old Port<br>
+                <input type="checkbox" name="place" value="promenade">East/West Promenade<br>
+                <input type="checkbox" name="place" value="island">Peaks Island<br>
+                <input type="checkbox" name="place" value="williams-park">Fort Williams Park<br>
+            </div>
+            <!-- Comments and suggestions -->
+            <div class="comments">
+                <p>Any comments or suggestions for us?</p>
+                <textarea name="comments" rows="5"></textarea>
+            </div>
+            <button id="submit" class="center">SUBMIT</button>
             </form>
         </div>
     </div>
