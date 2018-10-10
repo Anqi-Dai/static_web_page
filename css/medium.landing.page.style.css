@@ -102,16 +102,19 @@ nav i {
 }
 /* The categories part */
 /* New strategy: I will put the picture as the background image of the text. */
+/* It's much better!! to display the sub categories in grid and align the text(h1 heading) using flexbox!!!!*/
 #categories {
-    display: flex;
-    flex-flow: row wrap;
     height: 90vh;
     position: relative;
     top: 8vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    
 }
 #categories .sub{
-    flex: 33%;
-    max-width: 33%;
+    width: 100%;
     margin: auto;
 }
 #categories .sub h1 {
@@ -176,27 +179,33 @@ nav i {
     margin: auto;
 }
 #free-trial form{
-    
-    height: 20%;
-    width: 60%;
+    height: 10%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    grid-column-gap: 1rem;
     justify-items: center;
+    
 }
-#free-trial form input, #free-trial form button{
+form .email {
+    padding: 6px 0;
+}
+form input{
+    width: 80%;
+    height: 60%;
     line-height: 3;
-    padding: 0 20px;
+    padding: 0;
     border: 1px solid #222;
     font-size: 1rem;
     margin:1rem;
     text-align: center;
-    border: red solid;
+
 }
-#free-trial form button {
+form .btn {
     color: #fff;
     background-color: #222;
     margin-left: 1rem;
+
 }
 #free-trial form button:hover, #free-trial form button:focus{
     cursor: pointer;
@@ -238,6 +247,7 @@ footer {
     .showcase {
         width: 100%;
         height: 30vh;
+        overflow-x: hidden;
     }
     .showcase h1 {
         font-size: 2rem;
@@ -251,30 +261,12 @@ footer {
         height: 36vh;
     }/*Actually don't know why the video is in that scale*/
     #categories {
-        height: 90vh;
+        height: 100%;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
-        border: 2px solid red;
-        display: none;
-    }
-    .sub {
-     
-    }
-    /* Change the form two area into a grid of two rows */
-    #free-trial h1 , #free-trial h3 {
-        display: none;
-    }
-    form {
-        border: red solid;
-        height: 30vh;
-        width: auto;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-    }
-    form input, form button {
-       line-height: 3;
+        overflow-x: hidden;
     }
     footer ul li a {
        display: none;
