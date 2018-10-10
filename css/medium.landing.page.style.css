@@ -4,6 +4,8 @@ body{
     font-family: 'Prata', serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 nav {
     position: fixed;
@@ -38,8 +40,16 @@ nav i {
 /* The showcase part, including the content text */
 .showcase {
     height: 100vh;
+    width: 100%;
     color: #fff;    
 }
+.container{
+    max-width:960px;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin:auto;
+    text-align:center;
+  }
 
 .wrapper {
     position: absolute;
@@ -161,19 +171,32 @@ nav i {
 #free-trial h3 {
     font-family: "Open Sans", 'Times New Roman', Times, serif;
 }
+.center {
+    text-align: center;
+    margin: auto;
+}
+#free-trial form{
+    
+    height: 20%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0;
+    justify-items: center;
+}
 #free-trial form input, #free-trial form button{
     line-height: 3;
     padding: 0 20px;
-    text-align: left;
     border: 1px solid #222;
     font-size: 1rem;
-    margin:2rem;
+    margin:1rem;
+    text-align: center;
+    border: red solid;
 }
 #free-trial form button {
     color: #fff;
     background-color: #222;
     margin-left: 1rem;
-    font-weight: bold;
 }
 #free-trial form button:hover, #free-trial form button:focus{
     cursor: pointer;
@@ -205,4 +228,57 @@ footer {
 .footer-bottom p {
     padding: 0;
     margin: 10px 0;
+}
+
+/* Media queries part */
+@media (max-width:680px) {
+    nav ul li {
+        font-size: 0.7rem;
+    }
+    .showcase {
+        width: 100%;
+        height: 30vh;
+    }
+    .showcase h1 {
+        font-size: 2rem;
+    }
+    .showcase h2 {
+        font-size: 0.8rem;
+        padding-top: 1rem;
+    }
+    .showcase .overlay {
+        width: 100%;
+        height: 36vh;
+    }/*Actually don't know why the video is in that scale*/
+    #categories {
+        height: 90vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        border: 2px solid red;
+        display: none;
+    }
+    .sub {
+     
+    }
+    /* Change the form two area into a grid of two rows */
+    #free-trial h1 , #free-trial h3 {
+        display: none;
+    }
+    form {
+        border: red solid;
+        height: 30vh;
+        width: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    form input, form button {
+       line-height: 3;
+    }
+    footer ul li a {
+       display: none;
+    }
+
+  
 }
