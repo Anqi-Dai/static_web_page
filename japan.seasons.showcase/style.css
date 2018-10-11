@@ -1,0 +1,73 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Kurale', serif;
+}
+
+/* header */
+.showcase::after {
+  content:'';
+  height: 100vh;
+  width:100%;
+  background-image: url("../img/fuji.mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter:blur(10px);
+  transition: all 1000ms;
+}
+
+.showcase:hover::after {
+  filter: blur(0px);
+  -webkit-filter:blur(0px);
+}
+
+.showcase:hover .content{
+  filter: blur(5px);
+  -webkit-filter:blur(5px);
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  color:#f4f4f4;
+  text-align:left;
+  width: 400px;
+  height: 200px;
+  top: 15%;
+  left:10%;
+}
+.content h1 {
+  font-size: 70px;
+  line-height: 1.1;
+}
+.content h2 {
+  line-height: 2.5;
+}
+
+/* section four seasons */
+.grid {
+  height:100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.grid>img {
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* on small screen stack the four seasons pics */
+@media (max-width:700px) {
+  .grid {
+    display:grid;
+    height:100vh;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+}
