@@ -13,12 +13,15 @@ nav {
     background: #fff;
     padding: 0;
     width: 100%;
-    z-index: 99;;
+    z-index: 99;
+}
+nav ul{
+    margin: 0;
+    padding: 1rem;
 }
 nav ul li{
     display: inline;
     padding: 10px 25px;
-    /* border: 2px solid black; */
     margin: 0;
 }
 nav ul li a{
@@ -29,13 +32,11 @@ nav ul li a{
 nav ul li a:hover{
     cursor: pointer;
 }
-nav i {
-    font-size: 40px;
-    padding: 0;
-    margin: 0;
+#header-img{
     position: absolute;
-    top: 5px;
-    left: 30px;
+    top: 0.6rem;
+    height: 30px;
+    width: 30px;
 }
 /* The showcase part, including the content text */
 .showcase {
@@ -59,28 +60,17 @@ nav i {
     height: 100vh;
     overflow: hidden;
 }
-#video video{
-    min-width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-}
-.showcase .overlay {
-    background-color: black;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
+
+
 .showcase .brand {
     position: absolute;
     width: 100%;
     height: 100vh;
     top: 0;
-    z-index: 99;
-    /* border: 2px solid red; */
+    z-index: 3;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.pexels.com/photos/711009/pexels-photo-711009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: top;/*This is how you change where in the pic to put there*/
+    background-size: cover;
 }
 .showcase h1{
     font-size: 7rem;
@@ -97,12 +87,13 @@ nav i {
     text-align: center;
     position: relative;
     top: 3vh;
-    margin-top: 0;
+    margin-top: 0.5rem;
     font-style: italic;
 }
 /* The categories part */
 /* New strategy: I will put the picture as the background image of the text. */
 /* It's much better!! to display the sub categories in grid and align the text(h1 heading) using flexbox!!!!*/
+
 #categories {
     height: 90vh;
     position: relative;
@@ -111,7 +102,10 @@ nav i {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1rem;
-    
+}
+.categories-container{
+    width: 90%;
+    margin: auto;
 }
 #categories .sub{
     width: 100%;
@@ -130,6 +124,7 @@ nav i {
 /* Add hover effect on the h1 of the sub */
 #categories .sub h1:hover, #categories .sub h1:focus{
     cursor:pointer;
+    text-decoration: underline;
 }
 .tech{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),  url(https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);/*linear gradient successfullly adds a half transparent filter to the picure.*/
@@ -161,7 +156,27 @@ nav i {
     background-position: center;
     background-size: cover;
 }
-/* The free-trial part */
+/* The video and the free-trial part. They are going to be in a side by side half split grid */
+.wrapper-2-col{
+    width: 90%;
+    margin: auto;
+
+}
+.grid-2-col{
+    display: grid;
+ 
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    
+}
+#video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 4rem;
+
+}
+
 #free-trial {
     position: relative;
     top: 10vh;
@@ -205,7 +220,7 @@ form .btn {
     color: #fff;
     background-color: #222;
     margin-left: 1rem;
-
+    border: #222 4px solid;
 }
 #free-trial form button:hover, #free-trial form button:focus{
     cursor: pointer;
@@ -240,36 +255,64 @@ footer {
 }
 
 /* Media queries part */
-@media (max-width:680px) {
+@media (max-width:880px) {
     nav ul li {
         font-size: 0.7rem;
+        padding-left: 2rem;
+        padding-right: 1rem;
     }
+    /* The showcase part */
     .showcase {
         width: 100%;
-        height: 30vh;
-        overflow-x: hidden;
+        height: 50vh;
+        overflow: hidden;
+        position: relative;
+       
     }
     .showcase h1 {
         font-size: 2rem;
+        padding-bottom: 0.8rem;;
     }
     .showcase h2 {
         font-size: 0.8rem;
-        padding-top: 1rem;
+        padding-top: 2rem;
     }
-    .showcase .overlay {
-        width: 100%;
-        height: 36vh;
-    }/*Actually don't know why the video is in that scale*/
+    /* The categories part */
     #categories {
+        position: relative;
         height: 100%;
-        width: 100%;
+        width: 90%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
         overflow-x: hidden;
+        
     }
-    footer ul li a {
+    /* The video and the form part */
+    .grid-2-col{
+        display: block;
+    }
+   
+    #video {
+        margin-top: 5%;
+        margin-bottom: 0px;
+    }
+    #free-trial{
+        padding-top: 0;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    #free-trial h1 {
+        font-size: 1.5rem;
+    }
+    #free-trial h3 {
+        font-size: .8rem;
+    }
+    footer ul li a{
        display: none;
+
     }
 
   
