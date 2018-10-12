@@ -18,7 +18,7 @@
                 </div>
                 <div class="nav-bar" >
                     <nav id="navbar">
-                        <header>Introduction</header>
+                        <header>An introduction</header>
                         <ul>
                             <li>
                                 <a href="#What_is_snakemake" class="nav-link">What is Snakemake</a>
@@ -68,7 +68,8 @@
                     <p>
                             Then, you can install Snakemake with
                     </p>
-                    <code>$ conda install -c bioconda -c conda-forge snakemake</code>
+                    <div class="code"><code>$ conda install -c bioconda -c conda-forge snakemake</code></div>
+                    
                     <p>
                         from the <a href="https://bioconda.github.io/">Bioconda</a> channel.
                     </p>
@@ -86,19 +87,20 @@
                     <p>
                             Most importantly, a rule can consist of a name (the name is optional and can be left out, creating an anonymous rule), input files, output files, and a shell command to generate the output from the input, i.e.
                     </p>
-                    <code>
+                    <div class="code"><code>
                             rule NAME:
                             input: "path/to/inputfile", "path/to/other/inputfile"
                             output: "path/to/outputfile", "path/to/another/outputfile"
                             shell: "somecommand {input} {output}"
-                    </code>
+                    </code></div>
+                    
                     <h3>
                             Wildcards
                     </h3>
                     <p>
                             Usually, it is useful to generalize a rule to be applicable to a number of e.g. datasets. For this purpose, wildcards can be used. Automatically resolved multiple named wildcards are a key feature and strength of Snakemake in comparison to other systems. Consider the following example.
                     </p>
-                    <code>
+                    <div class="code"><code>
                             rule complex_conversion:
                             input:
                                 "{dataset}/inputfile"
@@ -106,7 +108,8 @@
                                 "{dataset}/file.{group}.txt"
                             shell:
                                 "somecommand --group {wildcards.group} < {input} > {output}”
-                    </code>
+                    </code></div>
+                    
                 </section>
                 <section id="Executing_workflows" class="main-section">
                     <header>
@@ -118,14 +121,16 @@
                     <p>
                             If called without parameters, i.e.
                     </p>
-                    <code>
+                    <div class="code"><code>
                             $ snakemake
-                    </code>
+                    </code></div>
+                    
                     <p>
                             Snakemake tries to execute the workflow specified in a file called <code>Snakefile</code> in the same directory (instead, the Snakefile can be given via the parameter <code>-s</code> ).
                     </p>
                     <p>By issuing</p>
-                    <code>$ snakemake -n</code>
+                    <div class="code"><code>$ snakemake -n</code></div>
+                    
                     <p>a dry-run can be performed. This is useful to test if the workflow is defined properly and to estimate the amount of needed computation.</p>
                 </section>
                 <section id="Citing_and_citations" class="main-section">
@@ -137,16 +142,16 @@
                     </p>
                     <h4>Cite This</h4>
                     <ul>
-                        <li><a href="http://bioinformatics.oxfordjournals.org/content/28/19/2520">Köster, Johannes and Rahmann, Sven. “Snakemake - A scalable bioinformatics workflow engine”. Bioinformatics 2012.</a></li>
+                        <li><a href="http://bioinformatics.oxfordjournals.org/content/28/19/2520" target='_blank'>Köster, Johannes and Rahmann, Sven. “Snakemake - A scalable bioinformatics workflow engine”. Bioinformatics 2012.</a></li>
                     </ul>
                     
                     <h4>More References</h4>
                     <ul>
                     <p>Another publication describing more of Snakemake internals:</p>
-                    <li> <a href="http://drops.dagstuhl.de/opus/volltexte/oasics-complete/oasics-vol26-gcb2012-complete.pdf">Köster, Johannes and Rahmann, Sven. “Building and Documenting Bioinformatics Workflows with Python-based Snakemake”. Proceedings of the GCB 2012.</a>
+                    <li> <a href="http://drops.dagstuhl.de/opus/volltexte/oasics-complete/oasics-vol26-gcb2012-complete.pdf" target='_blank'>Köster, Johannes and Rahmann, Sven. “Building and Documenting Bioinformatics Workflows with Python-based Snakemake”. Proceedings of the GCB 2012.</a>
                     </li>
                     <p>And my PhD thesis which describes all algorithmic details:</p>
-                    <li>  <a href="https://eldorado.tu-dortmund.de/handle/2003/33940">Johannes Köster, “Parallelization, Scalability, and Reproducibility in Next-Generation Sequencing Analysis”, TU Dortmund 2014</a>
+                    <li>  <a href="https://eldorado.tu-dortmund.de/handle/2003/33940" target='_blank'>Johannes Köster, “Parallelization, Scalability, and Reproducibility in Next-Generation Sequencing Analysis”, TU Dortmund 2014</a>
                     </li>
                 </ul>
                 </section>

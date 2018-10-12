@@ -1,0 +1,51 @@
+:root{
+    --blue: #2980B9;
+    --dark: #1f1d1d;
+    --light: #fcfcfc;
+    --code: #E0F8A4;
+}
+/* Global */
+body{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    background: Var(--light);
+    color: Var(--dark);
+}
+span{
+    font-weight: bold;
+}
+a{
+    color: Var(--dark);
+    text-decoration: none;
+}
+.code{
+    background: Var(--code);
+    padding: 0.8rem;
+    border: 0.5px solid #C2F24C;
+}
+/* The specific parts */
+/* The main part is a 2-grid */
+.main-2-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 2rem;
+}
+/* The nav part */
+.nav-grid {
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+    grid-gap: 2rem;
+    background: Var(--dark);
+    color: Var(--light);
+}
+.title{
+    background: Var(--blue);
+}
+nav a, nav a:visited{
+    color: Var(--light);
+}
+nav li {
+    list-style: none;
+    padding: 0.5rem;
+}
