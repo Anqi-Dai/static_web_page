@@ -13,6 +13,7 @@ body{
     color: Var(--dark);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
+    box-sizing: border-box;
 }
 span{
     font-weight: bold;
@@ -99,3 +100,31 @@ nav a:hover{
     padding-top: 1rem;
 }
 
+/* On smaller screen */
+@media (max-width:660px) {
+    .main-2-grid{
+        display: block;
+    }
+    .nav-grid{
+        position: relative;
+    }
+    body{
+        width: 100%;
+    }
+    .nav-grid{
+        padding: 0;
+        margin: 0;
+        height: 55vh;
+    }
+    .content{
+        padding: 2rem 3rem;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+        justify-content: center;
+        align-items: center;/*align-items is changing the position of the stuff in a way that is parallel to the flex direction */
+    }
+
+}
