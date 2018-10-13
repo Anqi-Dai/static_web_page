@@ -66,6 +66,12 @@ hr{
 .title i {
     margin: 0.2rem;
 }
+nav header {
+    padding: 0.8rem;
+    margin: 0;
+    font-style: italic;
+    width: 80%;
+}
 nav ul{
     list-style-type: none;
     padding: 0;
@@ -114,7 +120,7 @@ nav a:hover{
     .nav-grid{
         padding: 0;
         margin: 0;
-        height: 55vh;
+        height: 65vh;
     }
     .content{
         padding: 2rem 3rem;
@@ -125,6 +131,10 @@ nav a:hover{
         margin: 0 2rem;
         justify-content: center;
         align-items: center;/*align-items is changing the position of the stuff in a way that is parallel to the flex direction */
+    }
+    nav header {
+        text-align: center;
+        width: 100%;
     }
 
 }
