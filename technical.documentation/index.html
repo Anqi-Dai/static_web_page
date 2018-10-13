@@ -18,7 +18,6 @@
                 </div>
                 <div class="nav-bar" >
                     <nav id="navbar">
-                        <header>An introduction</header>
                         <ul>
                             <li>
                                 <a href="#What_is_snakemake" class="nav-link">What is Snakemake</a>
@@ -48,6 +47,7 @@
                             The Snakemake workflow management system is a tool to create <span>reproducible and scalable</span> data analyses. Workflows are described via a human readable, Python based language. They can be seamlessly scaled to server, cluster, grid and cloud environments, without the need to modify the workflow definition. Finally, Snakemake workflows can entail a description of required software, which will be automatically deployed to any execution environment.
                     </p>
                 </section>
+                <hr>
                 <section id="Installation" class="main-section">
                     <header>
                             <h1>Installation</h1>
@@ -71,9 +71,10 @@
                     <div class="code"><code>$ conda install -c bioconda -c conda-forge snakemake</code></div>
                     
                     <p>
-                        from the <a href="https://bioconda.github.io/">Bioconda</a> channel.
+                        from the <a href="https://bioconda.github.io/"><u>Bioconda</u></a> channel.
                     </p>
                 </section>
+                <hr>
                 <section id="Writing_workflows" class="main-section">
                     <header>
                         <h1>Writing workflows</h1>
@@ -88,10 +89,10 @@
                             Most importantly, a rule can consist of a name (the name is optional and can be left out, creating an anonymous rule), input files, output files, and a shell command to generate the output from the input, i.e.
                     </p>
                     <div class="code"><code>
-                            rule NAME:
-                            input: "path/to/inputfile", "path/to/other/inputfile"
-                            output: "path/to/outputfile", "path/to/another/outputfile"
-                            shell: "somecommand {input} {output}"
+                            rule NAME: <br>
+                                input: "path/to/inputfile", "path/to/other/inputfile"<br>
+                                output: "path/to/outputfile", "path/to/another/outputfile"<br>
+                                shell: "somecommand {input} {output}"
                     </code></div>
                     
                     <h3>
@@ -101,16 +102,17 @@
                             Usually, it is useful to generalize a rule to be applicable to a number of e.g. datasets. For this purpose, wildcards can be used. Automatically resolved multiple named wildcards are a key feature and strength of Snakemake in comparison to other systems. Consider the following example.
                     </p>
                     <div class="code"><code>
-                            rule complex_conversion:
-                            input:
-                                "{dataset}/inputfile"
-                            output:
-                                "{dataset}/file.{group}.txt"
-                            shell:
-                                "somecommand --group {wildcards.group} < {input} > {output}”
+                            rule complex_conversion:<br>
+                            input:<br>
+                                "{dataset}/inputfile"<br>
+                            output:<br>
+                                "{dataset}/file.{group}.txt"<br>
+                            shell:<br>
+                                "somecommand --group {wildcards.group} < {input} > {output}”<br>
                     </code></div>
                     
                 </section>
+                <hr>
                 <section id="Executing_workflows" class="main-section">
                     <header>
                         <h1>Executing workflows</h1>
@@ -133,6 +135,7 @@
                     
                     <p>a dry-run can be performed. This is useful to test if the workflow is defined properly and to estimate the amount of needed computation.</p>
                 </section>
+                <hr>
                 <section id="Citing_and_citations" class="main-section">
                     <header>
                         <h1>Citing and citations</h1>
