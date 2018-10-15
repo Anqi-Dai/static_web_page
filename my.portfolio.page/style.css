@@ -5,3 +5,73 @@
     --dark: #1f1d1d;
     --light: #fcfcfc;
 }
+
+/* Global */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: Var(--dark);
+}
+
+/* The welcome part */
+
+/* The navigation bar */
+nav{
+    /* border: solid red; */
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+nav li{
+    display: inline;
+    padding: 1rem 2rem;
+}
+nav a{
+    text-decoration: none;
+}
+/* The welcome front page */
+.showcase-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: url('https://images.pexels.com/photos/390573/pexels-photo-390573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'), no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+.showcase-content h1{
+    font-size: 5rem;
+}
+
+/* The projects part */
+#projects-info{
+    position: relative;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+}
+.projects-container{
+    border: solid red;
+    height: 80vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3rem;
+}
+.project{
+    width: 100%;
+    height: auto;
+    border: solid red;
+}
