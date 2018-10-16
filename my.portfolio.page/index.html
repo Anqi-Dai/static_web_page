@@ -9,21 +9,23 @@
     <title>My Portfolio</title>
 </head>
 <body>
+    <!-- The navigation bar -->
+    <header class="nav" id="navbar">
+            <nav >
+                <ul>
+                    <li>
+                        <a href="#projects">Work</a>
+                    </li>
+                    <li>
+                        <a href="#contact-info">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     <main>
+        
         <!-- The welcome page -->
-        <div class="welcome">
-            <header class="nav">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#projects-info">Work</a>
-                        </li>
-                        <li>
-                            <a href="#contact-info">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+        <div class="welcome" id="welcome-section">
             <div class="showcase-content">
                 <h1>
                     Hello, <br>
@@ -32,57 +34,70 @@
             </div>
         </div>
         <!-- The projects page -->
-        <div id="projects-info">
+        <div id="projects">
             <h1>
                 Showcase of my projects
             </h1>
             <div class="projects-container">
-                <div class="project">
+                <div class="project-tile">
                     <img src="https://codepen.io/anqi-dai/pen/mGZYpG/image/small.png" alt="tribute page">
                     <h4>Tribute Page</h4>
-                    <i class="fab fa-github"></i> <a href="https://github.com/Anqi-Dai/static_web_page/tree/master/tribute.page" target="_blank">GitHub</a>
+                    <div class="link">
+                             <a href="https://github.com/Anqi-Dai/static_web_page/tree/master/tribute.page" target="_blank"><i class="fab fa-github"></i></a>
+                             <a href="https://codepen.io/anqi-dai/pen/mGZYpG" target="_blank"><i class="fab fa-codepen"> </i></a>
+                    </div>
                 </div>
-                <div class="project">
+                <div class="project-tile">
                         <img src="https://codepen.io/anqi-dai/pen/mzeJKP/image/small.png" alt="survey form">
                         <h4>Survey Form</h4>
-                        <i class="fab fa-github"></i><a href="https://github.com/Anqi-Dai/static_web_page/tree/master/survey.form">GitHub</a>
+                        <div class="link">
+                                 <a href="https://github.com/Anqi-Dai/static_web_page/tree/master/survey.form" target="_blank"><i class="fab fa-github"></i></a>
+                                 <a href="https://codepen.io/anqi-dai/pen/mzeJKP" target="_blank"><i class="fab fa-codepen"> </i></a>
+                        </div>
                     </div>
-                    <div class="project">
+                    <div class="project-tile">
                             <img src="https://codepen.io/anqi-dai/pen/rqmvEJ/image/small.png" alt="landing page">
                             <h4>Landing Page</h4>
-                            <i class="fab fa-github"> </i><a href="https://github.com/Anqi-Dai/static_web_page/tree/master/landing.page">GitHub</a>
+                            <div class="link">
+                                     </i> <a href="https://github.com/Anqi-Dai/static_web_page/tree/master/landing.page" target="_blank"><i class="fab fa-github"></i></a>
+                                     <a href="https://codepen.io/anqi-dai/pen/rqmvEJ" target="_blank"><i class="fab fa-codepen"> </i></a>
+                            </div>
                         </div>
-                        <div class="project">
+                        <div class="project-tile">
                                 <img src="https://codepen.io/anqi-dai/pen/MPozjZ/image/small.png" alt="technical documentation">
                                 <h4>Technical Documentation</h4>
-                                <i class="fab fa-github"> </i><a href="https://github.com/Anqi-Dai/static_web_page/tree/master/technical.documentation">GitHub</a>
+                                <div class="link">
+                                         <a href="https://github.com/Anqi-Dai/static_web_page/tree/master/technical.documentation" target="_blank"><i class="fab fa-github"> </i></a>
+                                         <a href="https://codepen.io/anqi-dai/pen/MPozjZ" target="_blank"><i class="fab fa-codepen"> </i></a>
+                                </div>
                             </div>
             </div>
         </div>
-        <!-- The contact page including the footer -->
+        <!-- The contact page part-->
         <div id="contact-info">
             <div class="contact-content">
                 <h1>Let's get in touch!</h1>
                 <div class="social-media-grid">
-                    <div class="item">
+                    <div class="btn" >
                             <i class="fab fa-github"> </i>
-                            <a href="https://github.com/Anqi-Dai" target="_blank">GitHub</a>
+                            <a id="profile-link" href="https://github.com/Anqi-Dai" target="_blank">GitHub</a>
                     </div>
-                    <div class="item">
+                    <div class="btn">
                             <i class="fab fa-twitter"> </i>
                             <a href="https://twitter.com/anqi_dai_" target="_blank">Twitter</a>
                     </div>
-                    <div class="item">
+                    <div class="btn">
                             <i class="fab fa-codepen"> </i>
                             <a href="https://codepen.io/anqi-dai/" target="_blank">CodePen</a>
                     </div>
                 </div>
-            <footer>
-                    <p>Made with <i class="far fa-heart"></i> by Anqi Dai</p>
-                    <p>&copy; Copyright 2018</p>
-            </footer>
+            
             </div>
         </div>
     </main>
+    <footer>
+        <p>Made with <i class="far fa-heart"></i> by Anqi Dai</p>
+        <p>&copy; Copyright 2018</p>
+</footer>
 </body>
 </html>
